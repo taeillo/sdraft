@@ -1,7 +1,7 @@
 from flask import Flask, request, redirect, jsonify, render_template
 import requests
 import json
-import pandas as pd
+#import pandas as pd
 
 
 new_url =	"https://taeillo.com/cart.json"	 #"https://e9d392ea47c9a5cbf914426a4845082a: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@taeillo-online.myshopify.com/admin/api/2021-04/cart.js"
