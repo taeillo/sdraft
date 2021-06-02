@@ -1,0 +1,71 @@
+{% extends 'base.html' %}  
+
+{% block head %} 
+    
+{% endblock %}
+ 
+{% block body %}
+
+<div class="desktop-section furniture">
+  <div class="fun"><div class="big">Checkout</div><div class="dash"></div></div>
+  <div class="cart-form">
+  	
+  	<form action="/paywithspecta" method="POST">
+  	<label>First Name</label><br>
+  	<input type="text" name="firstname" required><br>
+
+  	<label>Last Name</label><br>
+  	<input type="text" name="lastname" required><br>
+
+  	<label>Shipping Address</label><br>
+  	<input type="text" name="address" required><br>
+
+  	<label>Email Address</label><br>
+  	<input type="email" name="emailaddress" required><br>
+
+  	<label>Phone Number</label><br>
+  	<input type="text" name="number" required><br>
+
+  	<label for="proname">Choose the product you want to buy:</label><br>
+	<select id="proname" name="proname">
+
+	  <option value="jumi">jumi</option>
+	  <option value="jumi prime">jumi prime</option>
+	  <option value="ada">ada</option>
+	  <option value="amakisi duo wardrobe">amakisi duo wardrobe</option>
+	  <option value="amakisi single wardrobe">amakisi single wardrobe</option>
+	  <option value="seyi 6-seater">seyi 6-seater</option>
+	  <option value="alausa">alausa</option>
+	  <option value="amakisi">amakisi</option>
+	  <option value="amakisi drawer">amakisi drawer</option>
+	  <option value="femi">femi</option>
+	  <option value="segun">segun</option>
+	  <option value="amakisi duo">amakisi duo</option>
+	  <option value="amakisi prime">amakisi prime</option>
+	  <option value="bosun">bosun</option>
+	  <option value="amakisi vip">amakisi vip</option>
+	  <option value="amakisi table with Chair">amakisi table with Chair</option>
+	  <option value="kemi combo">kemi combo</option>
+	  <option value="segun combo">segun combo</option>
+	  <option value="alausa combo">alausa combo</option>
+	 
+	</select><br>
+
+	<label for="quantity">Number of items:</label><br>
+  	<input type="number" id="quantity" name="quantity" min="1" max="50000000"><br>
+  	
+  	<label>Description</label><br>
+  	<textarea name="note" placeholder="Add description"></textarea><br>
+ 	<button type="submit" value="submit">Pay with Specta</button><br>
+	</form>
+
+	<a href="/" class="btn">Back to Furniture</a>
+
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}

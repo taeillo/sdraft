@@ -1,83 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Test</title>
+{% extends 'base.html' %}  
 
-</head>
-<body>
-  <style>
-    .specta{
-      padding: 1em;
-      color: #fff;
-      background: rgb(160, 0, 101);
-      text-align: center;
-      border-radius: 4px;
-      margin-bottom: 5em;
-      font-size: small !important;
-      border: none;
-    }
+{% block head %} 
+    
+{% endblock %}
+ 
+{% block body %}
 
-    .specta:hover{
-      color:rgb(160, 0, 101);
-      background: transparent;
-      border: 1px solid rgb(160, 0, 101);
-    }
-  </style>
+<div class="desktop-section furniture">
+  <div class="fun"><div class="big">Furniture</div><div class="dash"></div></div>
+  <div><img class="furniture_image" src="{{ url_for('static', filename = 'image/ada2.png')}}"  alt="image"></div>
+</div>
 
+<!--form action="/paywithspecta" method="POST">
+  <label>Customer Name</label>
+  <input type="text" name="preference">
+  <label>Total price</label>
+  <input type="text" name="prices">
+  <label>Description</label>
+  <textarea name="note" placeholder="Add description"></textarea>
+  <button type="submit" value="submit">Pay with Specta</button>
+</form-->
 
+<div class="desktop">
 
-  <form action="/order">
-    <button class="specta" onclick="direct();"> PAY WITH SPECTA </button> 
-  </form>
-  
-
-  <!--button id="btn" class="specta">Click me!</button-->
+<div class="products">
+  <div class="product-pair"><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/jumi bed.jpg')}}"  alt="image"><span class="product_name">jumi</span><span class="product_price">₦99,999</span></a><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/jumi prime bed.jpg')}}"  alt="image"><span class="product_name">jumi prime</span><span class="product_price">₦59,999</span></a></div>
+  <div class="product-pair"><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/ada 2.jpg')}}"  alt="image"><span class="product_name">ada</span><span class="product_price">₦150,000</span></a><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/wardrobe.jpg')}}"  alt="image"><span class="product_name">amakisi duo wardrobe</span><span class="product_price">₦89,999</span></a></div>
+</div>
 
 
-  <script type="text/javascript">
-
-  var btn = document.getElementById("btn");
-  btn.addEventListener("click", function() {
-
-  var price = "50000";
-  var id = "92345";
-  var describe =  "Items price";
+<div class="products">
+  <div class="product-pair"><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/seyi-6-seater-sofa-sofas-28998819217568.jpg')}}"  alt="image"><span class="product_name">seyi 6-seater</span><span class="product_price">₦349,999</span></a><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/alausa.jpg')}}"  alt="image"><span class="product_name">alausa</span><span class="product_price">₦249,999</span></a></div>
+  <div class="product-pair"><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/amakisi table.jpg')}}"  alt="image"><span class="product_name">amakisi</span><span class="product_price">₦34,999</span></a><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/amakisi table with drawer.jpg')}}"  alt="image"><span class="product_name">amakisi drawer</span><span class="product_price">₦44,999</span></a></div>
+</div>
 
 
-  var myHeaders = new Headers();
-  myHeaders.append("x-ApiKey", "TEST_API_KEY");
-  myHeaders.append("content-type", "application/json");
+<div class="products">
+  <div class="product-pair"><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/femi.jpg')}}"  alt="image"><span class="product_name">femi</span><span class="product_price">₦44,999</span></a><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/segun.jpg')}}"  alt="image"><span class="product_name">segun</span><span class="product_price">₦39,999</span></a></div>
+  <div class="product-pair"><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/amakisi duo.jpg')}}"  alt="image"><span class="product_name">amakisi duo</span><span class="product_price">₦89,999</span></a><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/amakisi-prime-sofas-29001262006432.jpg')}}"  alt="image"><span class="product_name">amakisi prime</span><span class="product_price">₦49,999</span></a></div>
+</div>
 
 
-  var raw_new = {    "callBackUrl": "https://www.taeillo.com",   "reference": id,    "merchantId": "117143",   "description": describe,   "amount": price};
+<div class="products">
+  <div class="product-pair"><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/bosun.jpg')}}"  alt="image"><span class="product_name">bosun</span><span class="product_price">₦90,000</span></a><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/amakisi vip table.jpg')}}"  alt="image"><span class="product_name">amakisi vip</span><span class="product_price">₦69,999</span></a></div>
+  <div class="product-pair"><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/AMAKISI TABLE AND CHAIR.jpg')}}"  alt="image"><span class="product_name">amakisi table with Chair</span><span class="product_price">₦59,999</span></a><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/KEMI COMBO.jpg')}}"  alt="image"><span class="product_name">kemi combo</span><span class="product_price">₦279,999</span></a></div>
+</div>
 
-  var raw = JSON.stringify(raw_new)
 
-  var requestOptions = {
-    method: 'POST',
-    headers: myHeaders,
-    body: raw,
-    redirect: 'follow'
-  };
+<div class="products">
+  <div class="product-pair"><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/SEGUN TABLE AND CHAIR.jpg')}}"  alt="image"><span class="product_name">segun combo</span><span class="product_price">₦54,999</span></a><a href="/cart" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/ALAUSA COMBO.jpg')}}"  alt="image"><span class="product_name">alausa combo</span><span class="product_price">₦324,999</span></a></div>
+  <!--div class="product-pair"><a href="/" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/jumi bed.jpg')}}"  alt="image"><span class="product_name">jumi</span><span class="product_price">₦99,999</span></a><a href="/" class="product-col"><img class="product_image" src="{{ url_for('static', filename = 'image/jumi bed.jpg')}}"  alt="image"><span class="product_name">jumi</span><span class="product_price">₦99,999</span></a></div>
+</div-->
 
-  var url;
-
-  fetch("https://paywithspectaapi.sterling.ng/api/Purchase/CreatePaymentUrl", requestOptions)
-  .then(response => response.json())
-  .then(result => url = result)
-  .then(() => window.location.replace(url.result))
-  .catch(error => console.log('error', error));
-
-  
-
-  //Do something here
-
-  }, false);
-
-  </script>
-  
-
-<script rel="javascript" type= "text/javascript" src="{{ url_for('static', filename = 'index.js')}}"></script>
-</body>
-</html>
-
+</div>
+{% endblock %}

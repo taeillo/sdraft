@@ -1,0 +1,343 @@
+/* Tags */
+body{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: small;
+  color: #1b1c1c;
+  background: #E0DFE5;
+}
+
+a{
+  text-decoration: none;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 12rem 6rem 2rem 6rem;
+  width: 70%;
+}
+
+input,select,button{
+  height: 2rem;
+}
+
+button{
+  color: #fff;
+  background: #1b1c1c;
+  border: none;
+}
+ textarea{
+  height: 6rem;
+ }
+
+
+
+/* Classes */
+
+.nav{
+  /* nav bar */
+
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 85px;
+  left: 0;
+  top: 0;
+  background: #E0DFE5;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo{
+  /* Black and yellow without caption 1 */
+
+
+  position: absolute;
+  width: 42px;
+  height: 13.87px;
+  left: 52px;
+  top: 35px;
+}
+
+.search{
+  /* magnify 1 */
+
+
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  right: 15%;
+  top: 31px;
+  margin: 0 1em;
+}
+
+.cart{
+  /* shopping-outline 1 */
+
+
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  right: 11%;
+  top: 31px;
+  margin: 0 1em;
+  }
+
+.menu{
+  position: absolute;
+  width: 27px;
+  height: 17px;
+  right: 6.25vw;
+  top: 34px;
+  margin: 0 1em;
+}
+
+.div1, .div2, .div3{
+  position: absolute;
+  width: 27px;
+  height: 2.68px;
+  background: #1B1C1C;
+
+}
+
+.div1{
+  top: 0;
+}
+
+.div2{
+  top: 7.16px;
+}
+
+.div3{
+  top: 14.32px;
+}
+
+.desktop{
+  display: block;
+}
+
+.desktop-section{
+  display: flex;
+}
+
+.furniture{
+  display: flex;
+  width: 100%;
+}
+
+.fun{
+  /*border-right: 0.5px solid #C4C4C4;*/
+  width: 50%;
+  padding-bottom: 10rem;
+
+}
+
+.furniture_image{
+  width: 100%;
+  height: auto;
+
+}
+
+.big{
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 88px;
+  /* identical to box height */
+  margin: 18rem 0 4rem 12rem;
+  align-items: center;
+
+  color: #1B1C1C;
+}
+
+.dash{
+  width: 56px;
+  height: 4px;
+  background: #1B1C1C;
+  margin-left: 12rem;
+}
+
+.products{
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+.product-pair{
+  width: 50%;
+  display: flex;
+}
+
+.product-col{
+  display: flex;
+  width: 50%;
+  height: auto;
+  border: 0.25px solid #C4C4C4;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.product_image{
+  width: 100%;
+  height: 100%;
+  
+}
+
+.product_image:hover{
+  opacity: 0.4;
+}
+
+.product_name{
+  font-weight: 600;
+  text-align: center;
+  font-size: 1rem;
+  color: #1b1c1c;
+  margin: 1rem 0 0.5rem 0;
+}
+
+.product_price{
+  font-weight: 400;
+  text-align: center;
+  font-size: 1rem;
+  color: #1b1c1c;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.cart-form{
+  overflow-y: scroll;
+  width: 50%;
+  height: auto; 
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  color: #1b1c1c;
+  background: #fff;
+  border: 0.5 solid #1b1c1c;
+}
+
+
+
+
+
+
+
+
+
+.footer{
+  display: flex;
+  margin: 0;
+  line-height: 1.5;
+  background: #313739;
+
+}
+
+.part1{
+  background: transparent;
+  color: #fff;
+  border-right: 0.25px solid #C4C4C4;
+  width: 50%;
+  padding: 4em 8rem;
+}
+
+.part2{
+  background: transparent;
+  color: #fff;
+  width: 50%;
+  padding: 4em 8rem;
+}
+
+.title{
+  /* CONTACT INFORMATION */
+
+
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.0625rem;
+  line-height: 17px;
+  margin: 2rem 0;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.title1{
+  /* CONTACT INFORMATION */
+
+
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: .8125rem;
+  line-height: 17px;
+  margin: 2rem 0 12rem 0;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.title2{
+  /* CONTACT INFORMATION */
+
+
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: .7rem;
+  line-height: 17px;
+  margin: 12rem 0 4rem 0;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.title3{
+  /* CONTACT INFORMATION */
+
+
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: .7rem;
+  line-height: 17px;
+  margin: 0 4rem 4rem 0;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 1);
+}
+
+.desc{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 22px;
+  /* identical to box height */
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.twitter{
+  margin: 0 2rem 0 0;
+}
+
+
+
+  /* Ids*/

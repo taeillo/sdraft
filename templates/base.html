@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block html %}
+	<head>
+		<meta charset="utf-8">
+	  	<meta name="theme-color">  
+		<!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+		<link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename = 'index.css')}}"/>
+		<!--link rel="icon" type="image/jpg" href="{{ url_for('static', filename = 'img/muuvas_logo.png')}}" --> 
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,100&display=swap" rel="stylesheet">
+		<!--link rel="manifest" href="{{ url_for('static', filename='manifest.json') }}"-->
+		<title> Taeillo </title>
+		<meta name = "description" content = "Furniture as rugged as Africans">
+		<meta name="keywords" content="Taeillo, Taeillo furniture, Furniture, Reliable, Affordable">
+	  
+		{% block head %}{% endblock head %}
+
+	</head>
+	<body>
+
+		<div class="nav">
+			<a href="https://www.taeillo.com"><img class="logo" src="{{ url_for('static', filename = 'image/Black and yellow without caption.png')}}"  alt="image"></a>
+
+			<a href="https://www.taeillo.com/search"><img class="search" src="{{ url_for('static', filename = 'image/magnify.svg')}}"  alt="image"></a>
+			<a href="/cart"><img class="cart" src="{{ url_for('static', filename = 'image/shopping-outline.svg')}}"  alt="image"></a>
+			<a href="https://www.taeillo.com"><div class="menu">
+				<div class="div1"></div>
+				<div class="div2"></div>
+				<div class="div3"></div>
+			</div></a>
+			
+		</div>
+
+		{% block body %}
+
+	    {% endblock body %}
+
+	    <div class="footer">
+	    	<div class="part1">
+	    		<span class="title">CONTACT INFORMATION</span>
+	    		<span class="desc">taeillo@taeillo.com</span>
+	    		<span class="title1">For Further information and enquiries</span>
+
+	    		<span class="title">KEEP IN TOUCH</span>
+	    		<span class="desc">+234 805 957 8090</span>
+
+	    		<a href="https://taeillo.com/"><span class="title2">Copyright © 2021 Taeillo Nigeria</span></a>
+	    		
+
+
+	    	</div>
+	    	<div class="part2">
+	    		<span class="title">SOCIAL LINKS</span>
+	    		<div class="desc">
+	    			<a href="/"><img class="twitter" src="{{ url_for('static', filename = 'image/twitter (1) 1.svg')}}"  alt="image"></a>
+	    			<a href="/"><img class="twitter" src="{{ url_for('static', filename = 'image/facebook 1.svg')}}"  alt="image"></a>
+	    			<a href="/"><img class="twitter" src="{{ url_for('static', filename = 'image/instagram 1.svg')}}"  alt="image"></a>
+	    			<a href="/"><img class="twitter" src="{{ url_for('static', filename = 'image/whatsapp 1.svg')}}"  alt="image"></a>
+	    		</div>
+
+	    		<span class="title1">Invite customers to follow you on social networks</span>
+	    		<span class="title"><a href="https://taeillo.com/policies/terms-of-service"><span class="title3">Terms of Service</span></a><a href="https://taeillo.com/pages/refund-policy"><span class="title3">Refund Policy</span></a></span>
+
+	    		<a href="https://taeillo.com/"><span class="title2">Powered by Flask</span></a>
+	    	</div>
+	    </div>
+
+		<script rel="javascript" type= "text/javascript" src="{{ url_for('static', filename = 'index.js')}}"></script>
+	</body>
+{% endblock html %}
+</html>
