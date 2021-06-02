@@ -1,7 +1,6 @@
 from flask import Flask, request, redirect, jsonify, render_template
 import requests
 import json
-import pandas as pd
 import random
 import string
 
